@@ -1,2 +1,0 @@
-# .NetCoreWebAPITorneoYa
-.NetCore WebAPITorneoYa 

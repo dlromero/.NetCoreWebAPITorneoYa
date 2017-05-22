@@ -1,0 +1,9 @@
+D:\ZAW\TorneoYa\.NetCoreWebAPITorneoYa\WebAPITorneoYa\bin\Release\netcoreapp1.1\WebAPITorneoYa.deps.json
+D:\ZAW\TorneoYa\.NetCoreWebAPITorneoYa\WebAPITorneoYa\bin\Release\netcoreapp1.1\WebAPITorneoYa.runtimeconfig.json
+D:\ZAW\TorneoYa\.NetCoreWebAPITorneoYa\WebAPITorneoYa\bin\Release\netcoreapp1.1\WebAPITorneoYa.runtimeconfig.dev.json
+D:\ZAW\TorneoYa\.NetCoreWebAPITorneoYa\WebAPITorneoYa\bin\Release\netcoreapp1.1\WebAPITorneoYa.dll
+D:\ZAW\TorneoYa\.NetCoreWebAPITorneoYa\WebAPITorneoYa\bin\Release\netcoreapp1.1\WebAPITorneoYa.pdb
+D:\ZAW\TorneoYa\.NetCoreWebAPITorneoYa\WebAPITorneoYa\obj\Release\netcoreapp1.1\WebAPITorneoYa.csprojResolveAssemblyReference.cache
+D:\ZAW\TorneoYa\.NetCoreWebAPITorneoYa\WebAPITorneoYa\obj\Release\netcoreapp1.1\WebAPITorneoYa.AssemblyInfo.cs
+D:\ZAW\TorneoYa\.NetCoreWebAPITorneoYa\WebAPITorneoYa\obj\Release\netcoreapp1.1\WebAPITorneoYa.dll
+D:\ZAW\TorneoYa\.NetCoreWebAPITorneoYa\WebAPITorneoYa\obj\Release\netcoreapp1.1\WebAPITorneoYa.pdb
