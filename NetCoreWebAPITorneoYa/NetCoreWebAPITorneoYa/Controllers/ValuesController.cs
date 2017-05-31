@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using NetCoreWebAPITorneoYa.Models;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace NetCoreWebAPITorneoYa.Controllers
 {
@@ -11,6 +13,7 @@ namespace NetCoreWebAPITorneoYa.Controllers
     public class ValuesController : Controller
     {
         // GET api/values
+        [Authorize]
         [HttpGet]
         public IEnumerable<string> Get()
         {
@@ -19,7 +22,7 @@ namespace NetCoreWebAPITorneoYa.Controllers
         }
 
         // GET api/values/5
-        [HttpGet("{id}")]
+        [Authorize("read:messages")]
         public string Get(int id)
         {
             return "value";

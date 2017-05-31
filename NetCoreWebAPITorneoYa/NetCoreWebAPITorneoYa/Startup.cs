@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using NetCoreWebAPITorneoYa.Identity;
 
 namespace NetCoreWebAPITorneoYa
 {
@@ -29,6 +30,15 @@ namespace NetCoreWebAPITorneoYa
         {
             // Add framework services.
             services.AddMvc();
+
+            string domain = $"https://{Configuration["Auth0:Domain"]}/";
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("read:messages",
+                    policy => policy.Requirements.Add(new HasScopeRequirement("read:messages", domain)));
+                options.AddPolicy("create:messages",
+                    policy => policy.Requirements.Add(new HasScopeRequirement("create:messages", domain)));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -36,6 +46,13 @@ namespace NetCoreWebAPITorneoYa
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
+
+            var options = new JwtBearerOptions
+            {
+                Audience = $"https://{Configuration["Auth0:ApiIdentifier"]}",
+                Authority = $"https://{Configuration["Auth0:Domain"]}/"
+            };
+            app.UseJwtBearerAuthentication(options);
 
             app.UseMvc();
         }
