@@ -40,6 +40,7 @@ namespace NetCoreWebAPITorneoYa.Models
             try
             {
                 connection.Open();
+                                
                 return true;
             }
             catch (MySqlException ex)
@@ -78,15 +79,17 @@ namespace NetCoreWebAPITorneoYa.Models
             }
         }
 
-        public bool TestConnection()
+        public string TestConnection()
         {
             try
             {
-                return OpenConnection();
+                OpenConnection();
+                System.Data.ConnectionState connectionState = connection.State;
+                return connectionState.ToString();
             }
             catch (Exception)
             {
-                return false;
+                return string.Empty;
             }
         }
 
