@@ -23,10 +23,10 @@ namespace NetCoreWebAPITorneoYa.Models
         //Initialize values
         private void Initialize()
         {
-            server = "localhost";
-            database = "connectcsharptomysql";
-            uid = "username";
-            password = "password";
+            server = "127.0.0.1";
+            database = "tournament";
+            uid = "dlromeroa";
+            password = "L0cal123456@@";
             string connectionString;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
             database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
@@ -74,6 +74,18 @@ namespace NetCoreWebAPITorneoYa.Models
             catch (MySqlException ex)
             {
                 //MessageBox.Show(ex.Message);
+                return false;
+            }
+        }
+
+        public bool TestConnection()
+        {
+            try
+            {
+                return OpenConnection();
+            }
+            catch (Exception)
+            {
                 return false;
             }
         }
